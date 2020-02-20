@@ -5,7 +5,7 @@ import categoriaReducer from './categoriaReducer';
 const CategoriaState = (props) => {
 
     const initialState = {
-
+        
     }
 
     const [state, dispatch] = useReducer(categoriaReducer, initialState);
