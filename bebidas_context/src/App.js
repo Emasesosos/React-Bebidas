@@ -1,18 +1,23 @@
 import React from 'react';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
-import CategoriasState from './context/categorias/categoriaState';
+import ListaRecetas from './components/ListaRecetas';
+import CategoriaState from './context/categorias/categoriaState';
+import RecetaState from './context/recetas/recetaState';
 
 function App() {
   return (
-    <CategoriasState>
-      <Header/>
-      <div className="container mt-5">
-        <div className="row">
-          <Formulario/>
+    <CategoriaState>
+      <RecetaState>
+        <Header/>
+        <div className="container mt-5">
+          <div className="row">
+            <Formulario/>
+          </div>
+          <ListaRecetas/>
         </div>
-      </div>
-    </CategoriasState>
+      </RecetaState>
+    </CategoriaState> 
   );
 }
 

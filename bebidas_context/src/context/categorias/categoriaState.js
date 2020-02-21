@@ -1,13 +1,8 @@
-import React, { useState, useEffect, useReducer } from 'react';
+import React, { useState, useEffect } from 'react';
 import categoriaContext from './categoriaContext';
-import categoriaReducer from './categoriaReducer';
 import axios from 'axios';
 
 const CategoriaState = (props) => {
-
-    // const initialState = {}
-
-    // const [state, dispatch] = useReducer(categoriaReducer, initialState);
 
     const [categorias, guardarCategorias] = useState([]); // Crear el state del Context
 
@@ -31,6 +26,6 @@ const CategoriaState = (props) => {
         </categoriaContext.Provider>
     );
 };
- 
+
 export default CategoriaState;
 
