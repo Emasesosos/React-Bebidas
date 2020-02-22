@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import modalContext from './../context/modal/modalContext';
 
 const Receta = (props) => {
+
+    const modalsContext = useContext(modalContext);
+    const { guardarIdReceta } = modalsContext;
 
     const { receta } = props;
     
@@ -13,6 +17,9 @@ const Receta = (props) => {
                     <button
                         type="button"
                         className="btn btn-block btn-primary"
+                        onClick={() => {
+                            guardarIdReceta(receta.idDrink);
+                        }}
                     >
                         Ver Receta
                     </button>
