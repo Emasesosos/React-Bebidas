@@ -5,7 +5,7 @@ import axios from 'axios';
 const ModalState = (props) => {
 
     const [ idreceta, guardarIdReceta ] = useState(null); // Crear el state del Context
-    const [ receta, guardarReceta] = useState({});
+    const [ informacion, guardarReceta] = useState({});
 
     useEffect(() => { // Ejecutar el llamado a la API una vez que tengamos el Id de la receta
         const obtenerReceta = async () => {
@@ -22,8 +22,9 @@ const ModalState = (props) => {
     return (
         <modalContext.Provider
             value={{
+                informacion,
                 guardarIdReceta,
-                receta
+                guardarReceta
             }}
         >
             {props.children}

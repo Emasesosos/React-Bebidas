@@ -30,14 +30,14 @@ const RecetaState = (props) => {
             obtenerRecetas();
 
         }
-        
+        // eslint-disable-next-line
     }, [busqueda]);
 
     return (
         <recetaContext.Provider
             value={{
                 recetas,
-                buscarRecetas,
+                buscarRecetas, 
                 guardarConsultar
             }}
         >
